@@ -193,10 +193,10 @@ def signup(request):
 
         if password == password2:
             if User.objects.filter(email=email).exists():
-                messages.info(request, 'Email Taken')
+                messages.info(request, 'Този имейл вече е използван')
                 return redirect('signup')
             elif User.objects.filter(username=username).exists():
-                messages.info(request, 'Username taken')
+                messages.info(request, 'Потребителското име е заето')
                 return redirect('signup')
             else:
                 user = User.objects.create_user(username=username,email=email,password=password)
@@ -210,7 +210,7 @@ def signup(request):
                 new_profile.save()
                 return redirect('settings')
         else:
-            messages.info(request, 'Password not Matching')
+            messages.info(request, 'Паролите не съвпадат')
             return redirect('signup')
 
     else:
@@ -228,7 +228,7 @@ def signin(request):
             auth.login(request,user)
             return redirect('/')
         else:
-            messages.info(request,'Credentials Invalid')
+            messages.info(request,'Грешни данни')
             return redirect('signin')
     else:
         return render(request, 'signin.html')

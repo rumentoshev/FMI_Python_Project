@@ -30,7 +30,7 @@
 				<form action="/follow" method="POST">
 				{% csrf_token %}
 					<div class="add-btn">
-					<span style="color: white; font-size: 27px; margin-right: 520px;"><b><u><a href="/">Home</a></u></b></span>
+					<span style="color: white; font-size: 27px; margin-right: 310px;"><b><u><a href="/">Към началната страница</a></u></b></span>
 					{% if user_post_lenght == 0 %}
 					<span style="color: white; font-size: 27px;"><b>Няма публикации</b></span>
 					{% elif user_post_lenght == 1 %}
@@ -45,7 +45,7 @@
 					{% else %}
 					<span style="color: white; font-size: 27px;"><b>{{user_followers}} последователи</b></span>
 					{% endif %}
-					<span style="color: white; font-size: 27px;"><b>{{user_following}} следва</b></span>
+					<span style="color: white; font-size: 27px;"><b>следва {{user_following}}</b></span>
 
 					<input type="hidden" value="{{user.username}}" name="follower" />
 					<input type="hidden" value="{{user_object.username}}" name="user" />
@@ -75,7 +75,7 @@
 									<form class="edit-phto">
 										<i class="fa fa-camera-retro"></i>
 										<label class="fileContainer">
-											<a href="#account-settings">Upload Profile Photo</a>
+											<a href="/settings"> Смени снимката</a>
 										</label>
 									</form>
 								</figure>
@@ -113,7 +113,7 @@
 		</section><!-- top area -->
 		<section>
 			<div class="bio">
-				{{user_profile.bio}} 
+				<b>Информация за мен :</b> {{user_profile.bio}} 
 			</div>
 		</section>
 		
