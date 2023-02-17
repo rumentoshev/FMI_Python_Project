@@ -32,12 +32,15 @@
                 <div class="flex items-center lg:justify-between justify-around">
 
                     <a href="trending.html">
-                        <b><h1 style="font-size: 1.5rem;">Баир Будали</h1></b>
+                        <b>
+                            <h1 style="font-size: 1.5rem;">Баир Будали</h1>
+                        </b>
                     </a>
 
                     <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
-                        
-                        <a href="/signin" class="bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white">Влизане</a>
+
+                        <a href="/signin"
+                            class="bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white">Влизане</a>
                     </div>
 
                 </div>
@@ -53,7 +56,7 @@
 
                 <div>
                     <style>
-                        h5{
+                        h5 {
                             color: red;
                         }
                     </style>
@@ -63,15 +66,23 @@
                 </div>
 
                 <form action="" method="POST">
-                    {% csrf_token %}
+                {% csrf_token %}
                     <!--<div class="flex lg:flex-row flex-col lg:space-x-2">
                         <input type="text" placeholder="First Name"  class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
                         <input type="text" placeholder="Last Name" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
                     </div>-->
-                    <input type="text" name="username" placeholder="Потребителско име" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
-                    <input type="email" name ="email" placeholder="Email" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
-                    <input type="password" name="password" placeholder="Парола" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
-                    <input type="password" name="password2"placeholder="Потвърди паролата" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+                    <input type="text" name="username" placeholder="Потребителско име"
+                        class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800"
+                        style="border: 1px solid #d3d5d8 !important;">
+                    <input type="email" name="email" placeholder="Email"
+                        class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800"
+                        style="border: 1px solid #d3d5d8 !important;">
+                    <input type="password" name="password" placeholder="Парола"
+                        class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800"
+                        style="border: 1px solid #d3d5d8 !important;">
+                    <input type="password" name="password2" placeholder="Потвърди паролата"
+                        class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800"
+                        style="border: 1px solid #d3d5d8 !important;">
                     <!-- div class="flex justify-start my-4 space-x-1">
                         <div class="checkbox">
                             <input type="checkbox" id="chekcbox1" checked>
@@ -79,14 +90,15 @@
                         </div>
                         <a href="#"> Terms and Conditions</a>
                     </div -->
-                    <button type="submit" class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Регистрация</button>
+                    <button type="submit"
+                        class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Регистрация</button>
                     <div class="text-center mt-5 space-x-2">
                         <p class="text-base"> Вече имаш акаунт? <a href="/signin"> Влез в него </a></p>
                     </div>
                 </form>
             </div>
         </div>
-        
+
         <!-- Footer -->
 
         <div class="lg:mb-5 py-3 uk-link-reset">
